@@ -58,7 +58,7 @@ async def get_weather(messege: types.Message):
                 f"https://api.openweathermap.org/data/2.5/weather?q={messege.text}&appid={API_KEY}&units=metric"
             )
             data = r.json()
-            #pprint(data)
+            print(data)
             city = data["name"]
 
             weather_description = data["weather"][0]["main"]
